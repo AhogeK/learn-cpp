@@ -1,8 +1,8 @@
 #include <iostream>
-#include "part_1/chapter_1/listing_1_4.cuh"
+#include "part_1/listing_1.cuh"
 int main()
 {
     std::cout << "Hello, World!" << std::endl;
-    a_program_with_conditional_behavior();
+    listing_1_7();
     return 0;
 }
