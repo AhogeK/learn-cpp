@@ -7,4 +7,6 @@
 
 void exercise_1_1();
 
+void exercise_1_4();
+
 #endif //LEARN_CPP_EXERCISE_1_CUH

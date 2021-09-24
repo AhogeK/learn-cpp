@@ -5,5 +5,6 @@
 int main() {
     std::cout << "Hello, World!" << std::endl;
     exercise_1_1();
+    exercise_1_4();
     return 0;
 }
