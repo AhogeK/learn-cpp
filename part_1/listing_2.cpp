@@ -1,7 +1,7 @@
 //
 // Created by ahogek on 9/26/21.
 //
-#include <cstdio>
+#include "listing_2.cuh"
 
 /**
  * 一个指定一些整型变量利用不同的进制进行打印的程序
@@ -30,7 +30,20 @@ void listing_2_2() {
  */
 void listing_2_3() {
     double an = 6.0221409e23;
+    /* l 代表 double le 科学计数 lf 普通计数 lg 计算机选择最合适的计数方式 */
     printf("Avogaadro's Number: %le %lf %lg\n", an, an, an);
     float hp = 9.75;
     printf("Hogwarts' Platform: %e %f %g\n", hp, hp, hp);
+}
+
+/**
+ * A program that assigns several character-typed variables and prints them
+ */
+void listing_2_4() {
+    char x = 'M';
+
+    /* 前缀L用于wchar_t类型的字面量 */
+    wchar_t y = L'Z';
+    /* %lc 指 wchar_t 类型 */
+    printf("Windows binaries start with %c%lc.\n", x, y);
 }
