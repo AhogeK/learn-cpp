@@ -47,3 +47,12 @@ void listing_2_4() {
     /* %lc 指 wchar_t 类型 */
     printf("Windows binaries start with %c%lc.\n", x, y);
 }
+
+/**
+ * Printing bool variables with a <i>printf<i> statement
+ */
+void listing_2_5() {
+    bool b1 = true; // b1 is true
+    bool b2 = false; // b2 is false
+    printf("%d %d\n", b1, b2);
+}
