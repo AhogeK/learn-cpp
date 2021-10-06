@@ -56,3 +56,15 @@ void listing_2_5() {
     bool b2 = false; // b2 is false
     printf("%d %d\n", b1, b2);
 }
+
+/**
+ * Using comparison operators
+ */
+void listing_2_6() {
+    printf(" 7 == 7: %d\n", 7 == 7);
+    printf(" 7 != 7: %d\n", 7 != 7);
+    printf("10 > 20: %d\n", 10 > 20);
+    printf("10 >= 20: %d\n", 10 >= 20);
+    printf("10 < 20: %d\n", 10 < 20);
+    printf("20 <= 20: %d\n", 20 <= 20);
+}
