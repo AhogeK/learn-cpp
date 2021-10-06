@@ -68,3 +68,16 @@ void listing_2_6() {
     printf("10 < 20: %d\n", 10 < 20);
     printf("20 <= 20: %d\n", 20 <= 20);
 }
+
+/**
+ * A program that illustrates the use of logical operators
+ */
+void listing_2_7() {
+    bool t = true;
+    bool f = false;
+    printf("!true: %d=n", !t);
+    printf("true && false: %d\n", t && f);
+    printf("true && !false: %d\n", t && !f);
+    printf("true || false: %d\n", t || f);
+    printf("false || false: %d\n", f || f);
+}
