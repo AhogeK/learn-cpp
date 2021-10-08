@@ -119,3 +119,19 @@ void listing_2_10() {
     }
     printf("The maximum value is %lu", maximum);
 }
+
+/**
+ * Printing the letters of the alphabet in lowercase and uppercase using ASCII
+ */
+void listing_2_12() {
+    char alphabet[27];
+    for (int i = 0; i < 26; i++) {
+        alphabet[i] = i + 97;
+    }
+    alphabet[26] = 0;
+    printf("%s\n", alphabet);
+    for (int i = 0; i < 26; i++) {
+        alphabet[i] = i + 65;
+    }
+    printf("%s\n", alphabet);
+}

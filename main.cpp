@@ -3,6 +3,6 @@
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    listing_2_10();
+    listing_2_12();
     return 0;
 }

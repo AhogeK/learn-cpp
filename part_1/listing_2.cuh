@@ -28,4 +28,6 @@ void listing_2_9();
 
 void listing_2_10();
 
+void listing_2_12();
+
 #endif //LEARN_CPP_LISTING_2_CUH
