@@ -26,4 +26,6 @@ void listing_2_8();
 
 void listing_2_9();
 
+void listing_2_10();
+
 #endif //LEARN_CPP_LISTING_2_CUH

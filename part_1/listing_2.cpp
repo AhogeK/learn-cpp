@@ -107,3 +107,15 @@ void listing_2_9() {
     arr[2] = 100;
     printf("The third element is %d. \n", arr[2]);
 }
+
+/**
+ * Finding hte maximum value contained in an array
+ */
+void listing_2_10() {
+    unsigned long maximum = 0;
+    unsigned long values[] = {10, 50, 20 ,40 ,0};
+    for (unsigned long value : values) {
+        if (value > maximum) maximum = value;
+    }
+    printf("The maximum value is %lu", maximum);
+}
