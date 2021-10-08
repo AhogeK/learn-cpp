@@ -97,3 +97,13 @@ void listing_2_8() {
     size_t size_ll = sizeof(long long);
     printf("long long: %zd\n", size_ll);
 }
+
+/**
+ * A program that indexes into an array
+ */
+void listing_2_9() {
+    int arr[] = {1, 2, 3, 4};
+    printf("The third element is %d \n", arr[2]);
+    arr[2] = 100;
+    printf("The third element is %d. \n", arr[2]);
+}
