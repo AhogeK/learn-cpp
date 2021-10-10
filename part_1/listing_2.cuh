@@ -30,6 +30,18 @@ void listing_2_10();
 
 void listing_2_12();
 
-enum class Race;
+/**
+ * An enumeration class containing all the races from Neal Stephenson's Seveneves
+ */
+enum class Race {
+    Dinan,
+    Teklan,
+    Ivyn,
+    Moiran,
+    Camite,
+    Julian,
+    Aidan
+};
+
 
 #endif //LEARN_CPP_LISTING_2_CUH

@@ -135,16 +135,3 @@ void listing_2_12() {
     }
     printf("%s\n", alphabet);
 }
-
-/**
- * An enumeration class containing all the races from Neal Stephenson's Seveneves
- */
-enum class Race {
-    Dinan,
-    Teklan,
-    Ivyn,
-    Moiran,
-    Camite,
-    Julian,
-    Aidan
-};
