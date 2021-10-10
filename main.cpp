@@ -3,8 +3,6 @@
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    listing_2_12();
-    Race longobard_race = Race::Aidan;
-    std::cout << static_cast<int>(longobard_race) << std::endl;
+    listing_2_15();
     return 0;
 }

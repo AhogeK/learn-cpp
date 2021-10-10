@@ -30,6 +30,8 @@ void listing_2_10();
 
 void listing_2_12();
 
+void listing_2_15();
+
 /**
  * An enumeration class containing all the races from Neal Stephenson's Seveneves
  */
