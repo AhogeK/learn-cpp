@@ -30,4 +30,6 @@ void listing_2_10();
 
 void listing_2_12();
 
+enum class Race;
+
 #endif //LEARN_CPP_LISTING_2_CUH
