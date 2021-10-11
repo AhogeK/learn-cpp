@@ -25,6 +25,12 @@ struct Book {
     bool hardcover;
 };
 
+union Variant {
+    char string[10];
+    int integer;
+    double floating_point;
+};
+
 void listing_2_1();
 
 void listing_2_2();
@@ -50,5 +56,7 @@ void listing_2_12();
 void listing_2_15();
 
 void listing_2_16();
+
+void listing_2_18();
 
 #endif //LEARN_CPP_LISTING_2_CUH
