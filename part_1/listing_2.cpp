@@ -192,3 +192,15 @@ void listing_2_18() {
     printf("Euler's number e: %f\n", v.floating_point);
     printf("A dumpster fire: %d\n", v.integer);
 }
+
+/**
+ * A program using the ClockOfTheLongNow struct
+ */
+void listing_2_19() {
+    ClockOfTheLongNow clock{};
+    clock.year = 2017;
+    clock.add_year();
+    printf("year: %d\n", clock.year);
+    clock.add_year();
+    printf("year: %d\n", clock.year);
+}

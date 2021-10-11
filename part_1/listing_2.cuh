@@ -25,6 +25,13 @@ struct Book {
     bool hardcover;
 };
 
+struct ClockOfTheLongNow {
+    void add_year() {
+        year++;
+    }
+    int year;
+};
+
 union Variant {
     char string[10];
     int integer;
@@ -58,5 +65,7 @@ void listing_2_15();
 void listing_2_16();
 
 void listing_2_18();
+
+void listing_2_19();
 
 #endif //LEARN_CPP_LISTING_2_CUH
