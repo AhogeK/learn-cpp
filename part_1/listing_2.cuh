@@ -5,8 +5,25 @@
 #ifndef LEARN_CPP_LISTING_2_CUH
 #define LEARN_CPP_LISTING_2_CUH
 
-#include <cstddef>
-#include <cstdio>
+/**
+ * An enumeration class containing all the races from Neal Stephenson's Seveneves
+ */
+enum class Race {
+    Dinan,
+    Teklan,
+    Ivyn,
+    Moiran,
+    Camite,
+    Julian,
+    Aidan
+};
+
+struct Book {
+    char name[256];
+    int year;
+    int pages;
+    bool hardcover;
+};
 
 void listing_2_1();
 
@@ -32,18 +49,6 @@ void listing_2_12();
 
 void listing_2_15();
 
-/**
- * An enumeration class containing all the races from Neal Stephenson's Seveneves
- */
-enum class Race {
-    Dinan,
-    Teklan,
-    Ivyn,
-    Moiran,
-    Camite,
-    Julian,
-    Aidan
-};
-
+void listing_2_16();
 
 #endif //LEARN_CPP_LISTING_2_CUH

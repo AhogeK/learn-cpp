@@ -1,6 +1,8 @@
 //
 // Created by ahogek on 9/26/21.
 //
+#include <cstddef>
+#include <cstdio>
 #include "listing_2.cuh"
 
 /**
@@ -168,4 +170,13 @@ void listing_2_15() {
             printf("Error: unknown race!");
         }
     }
+}
+
+/**
+ * Example using hte POD type Book to read and write members
+ */
+void listing_2_16() {
+    Book neuromancer;
+    neuromancer.pages = 271;
+    printf("Neuromancer has %d pages.", neuromancer.pages);
 }
