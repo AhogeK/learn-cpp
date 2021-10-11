@@ -204,3 +204,15 @@ void listing_2_19() {
     clock.add_year();
     printf("year: %d\n", clock.year);
 }
+
+/**
+ * A program using the ClockOfTheLongNow2 to illustrate the use of methods
+ */
+void listing_2_21() {
+    ClockOfTheLongNow2 clock{};
+    if (!clock.set_year(2018)) { // will file; 2018 < 2019
+        clock.set_year(2019);
+    }
+    clock.add_year();
+    printf("year: %d", clock.get_year());
+}
