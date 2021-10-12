@@ -115,8 +115,8 @@ void listing_2_9() {
  */
 void listing_2_10() {
     unsigned long maximum = 0;
-    unsigned long values[] = {10, 50, 20 ,40 ,0};
-    for (unsigned long value : values) {
+    unsigned long values[] = {10, 50, 20, 40, 0};
+    for (unsigned long value: values) {
         if (value > maximum) maximum = value;
     }
     printf("The maximum value is %lu", maximum);
@@ -144,28 +144,35 @@ void listing_2_12() {
 void listing_2_15() {
     Race race = Race::Dinan;
 
-    switch(race) {
+    switch (race) {
         case Race::Dinan: {
             printf("You work hard.");
-        } break;
+        }
+            break;
         case Race::Teklan: {
             printf("You are very strong.");
-        } break;
+        }
+            break;
         case Race::Ivyn: {
             printf("You are a great leader.");
-        } break;
+        }
+            break;
         case Race::Moiran: {
             printf("My, how versatile you are!");
-        } break;
+        }
+            break;
         case Race::Camite: {
             printf("You're incredibly helpful.");
-        } break;
+        }
+            break;
         case Race::Julian: {
             printf("Anything you want!");
-        } break;
+        }
+            break;
         case Race::Aidan: {
             printf("What an enigma.");
-        } break;
+        }
+            break;
         default: {
             printf("Error: unknown race!");
         }
@@ -215,4 +222,12 @@ void listing_2_21() {
     }
     clock.add_year();
     printf("year: %d", clock.get_year());
+}
+
+/**
+ * Elaborating ClockOfTheLongNow3 with another constructor
+ */
+void listing_2_23() {
+    ClockOfTheLongNow3 clock{2020};
+    printf("Year: %d", clock.get_year());
 }
