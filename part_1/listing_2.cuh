@@ -5,6 +5,10 @@
 #ifndef LEARN_CPP_LISTING_2_CUH
 #define LEARN_CPP_LISTING_2_CUH
 
+#include <cstdint>
+#include <cstddef>
+#include <cstdio>
+
 /**
  * An enumeration class containing all the races from Neal Stephenson's Seveneves
  */
@@ -72,6 +76,12 @@ private:
     int year;
 };
 
+struct PodStruct {
+    uint64_t a;
+    char b[256];
+    bool c;
+};
+
 class ClockOfTheLongNowClass {
     int year;
 public:
@@ -127,5 +137,9 @@ void listing_2_19();
 void listing_2_21();
 
 void listing_2_23();
+
+void listing_2_24();
+
+void listing_2_25();
 
 #endif //LEARN_CPP_LISTING_2_CUH

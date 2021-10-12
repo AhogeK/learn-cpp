@@ -1,8 +1,6 @@
 //
 // Created by ahogek on 9/26/21.
 //
-#include <cstddef>
-#include <cstdio>
 #include "listing_2.cuh"
 
 /**
@@ -230,4 +228,25 @@ void listing_2_21() {
 void listing_2_23() {
     ClockOfTheLongNow3 clock{2020};
     printf("Year: %d", clock.get_year());
+}
+
+/**
+ * A program illustrating various ways to initialize a POD
+ */
+void listing_2_24() {
+    PodStruct initialized_pod1{}; // All fields zeroed;
+    PodStruct initialized_pod2 = {}; // All fields zeroed;
+
+    PodStruct initialized_pod3 = {42, "Hello"}; // fields a & b set; c = 0;
+    PodStruct initialized_pod4{42, "Hello", true}; // All fields set
+}
+
+/**
+ * Listing 2-25 illustrates some ways to initialize an array
+ */
+void listing_2_25() {
+    int array_1[]{1, 2, 3}; // Array of length 3; 1, 2, 3
+    int array_2[5]{}; // Array of length 5; 0, 0, 0, 0, 0
+    int array_3[5]{1, 2, 3}; // Array of length 5; 1, 2, 3, 0, 0
+    int array_4[5]; // Array of length 5; uninitialized values
 }
