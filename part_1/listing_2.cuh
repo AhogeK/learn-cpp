@@ -33,6 +33,7 @@ struct ClockOfTheLongNow {
     void add_year() {
         year++;
     }
+
     int year;
 };
 
@@ -43,14 +44,17 @@ struct ClockOfTheLongNow2 {
     void add_year() {
         year++;
     }
+
     bool set_year(int new_year) {
         if (new_year < 2019) return false;
         year = new_year;
         return true;
     }
+
     int get_year() {
         return year;
     }
+
 private:
     int year;
 };
@@ -61,17 +65,21 @@ struct ClockOfTheLongNow3 {
             year = 2019;
         }
     }
+
     void add_year() {
         year++;
     }
+
     bool set_year(int new_year) {
         if (new_year < 2019) return false;
         year = new_year;
         return true;
     }
+
     int get_year() {
         return year;
     }
+
 private:
     int year;
 };
@@ -82,17 +90,40 @@ struct PodStruct {
     bool c;
 };
 
+/**
+ * A class announcing witch of its several constructors gets called during initialization
+ */
+struct Taxonomist {
+    Taxonomist() {
+        printf("(no argument)\n");
+    }
+
+    Taxonomist(char x) {
+        printf("char: %c\n", x);
+    }
+
+    Taxonomist(int x) {
+        printf("int: %d\n", x);
+    }
+
+    Taxonomist(float x) {
+        printf("float: %f\n", x);
+    }
+};
+
 class ClockOfTheLongNowClass {
     int year;
 public:
     void add_year() {
         year++;
     }
+
     bool set_year(int new_year) {
         if (new_year < 2019) return false;
         year = new_year;
         return true;
     }
+
     int get_year() {
         return year;
     }
