@@ -109,7 +109,7 @@ void listing_2_9() {
 }
 
 /**
- * Finding hte maximum value contained in an array
+ * Finding maximum value contained in an array
  */
 void listing_2_10() {
     unsigned long maximum = 0;
@@ -249,4 +249,15 @@ void listing_2_25() {
     int array_2[5]{}; // Array of length 5; 0, 0, 0, 0, 0
     int array_3[5]{1, 2, 3}; // Array of length 5; 1, 2, 3, 0, 0
     int array_4[5]; // Array of length 5; uninitialized values
+}
+
+void listing_2_27() {
+    Taxonomist t1;
+    Taxonomist t2{'c'};
+    Taxonomist t3{65537};
+    Taxonomist t4{6.024e23f};
+    Taxonomist t5('g');
+    Taxonomist t6 = {'l'};
+    Taxonomist t7{};
+    Taxonomist t8();
 }

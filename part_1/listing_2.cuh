@@ -173,4 +173,6 @@ void listing_2_24();
 
 void listing_2_25();
 
+void listing_2_27();
+
 #endif //LEARN_CPP_LISTING_2_CUH
