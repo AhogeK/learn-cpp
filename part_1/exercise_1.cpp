@@ -19,5 +19,5 @@ void exercise_1_1() {
 
 void exercise_1_4() {
     int a = -10, b = 12;
-    printf("%d + %d = %d", a, b, sum(a, b));
+    printf("%d + %d = %d\n", a, b, sum(a, b));
 }

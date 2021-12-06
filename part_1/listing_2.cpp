@@ -42,7 +42,7 @@ void listing_2_3() {
 void listing_2_4() {
     char x = 'M';
 
-    /* 前缀L用于wchar_t类型的字面量 */
+    /* 前缀L用于wchar_t类型的字面量 wchar_t 代表宽字符 */
     wchar_t y = L'Z';
     /* %lc 指 wchar_t 类型 */
     printf("Windows binaries start with %c%lc.\n", x, y);
@@ -117,7 +117,7 @@ void listing_2_10() {
     for (unsigned long value: values) {
         if (value > maximum) maximum = value;
     }
-    printf("The maximum value is %lu", maximum);
+    printf("The maximum value is %lu\n", maximum);
 }
 
 /**
@@ -144,35 +144,35 @@ void listing_2_15() {
 
     switch (race) {
         case Race::Dinan: {
-            printf("You work hard.");
+            printf("You work hard.\n");
         }
             break;
         case Race::Teklan: {
-            printf("You are very strong.");
+            printf("You are very strong.\n");
         }
             break;
         case Race::Ivyn: {
-            printf("You are a great leader.");
+            printf("You are a great leader.\n");
         }
             break;
         case Race::Moiran: {
-            printf("My, how versatile you are!");
+            printf("My, how versatile you are!\n");
         }
             break;
         case Race::Camite: {
-            printf("You're incredibly helpful.");
+            printf("You're incredibly helpful.\n");
         }
             break;
         case Race::Julian: {
-            printf("Anything you want!");
+            printf("Anything you want!\n");
         }
             break;
         case Race::Aidan: {
-            printf("What an enigma.");
+            printf("What an enigma.\n");
         }
             break;
         default: {
-            printf("Error: unknown race!");
+            printf("Error: unknown race!\n");
         }
     }
 }
@@ -183,7 +183,7 @@ void listing_2_15() {
 void listing_2_16() {
     Book neuromancer;
     neuromancer.pages = 271;
-    printf("Neuromancer has %d pages.", neuromancer.pages);
+    printf("Neuromancer has %d pages.\n", neuromancer.pages);
 }
 
 /**

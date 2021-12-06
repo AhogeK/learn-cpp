@@ -28,6 +28,7 @@ struct Calculator {
             case Operation::Divide:
                 return a % b;
         }
+        return -1;
     }
 private:
     Operation op;

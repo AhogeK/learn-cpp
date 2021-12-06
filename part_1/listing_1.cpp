@@ -5,9 +5,9 @@
 
 void a_program_with_conditional_behavior() {
     int x = 0;
-    if (x > 0) printf("Positive. ");
-    else if (x < 0) printf("Negative. ");
-    else printf("Zero. ");
+    if (x > 0) printf("Positive. \n");
+    else if (x < 0) printf("Negative. \n");
+    else printf("Zero. \n");
 }
 
 int step_function(int x) {
@@ -26,5 +26,5 @@ void listing_1_7() {
     int val1 = step_function(100);
     int val2 = step_function(0);
     int val3 = step_function(-100);
-    printf("val1: %d, val2: %d, val3: %d", val1, val2, val3);
+    printf("val1: %d, val2: %d, val3: %d\n", val1, val2, val3);
 }
