@@ -2,8 +2,8 @@
 // Created by ahogek on 10/31/21.
 //
 
-#ifndef LEARN_CPP_EXERCISE_2_H
-#define LEARN_CPP_EXERCISE_2_H
+#ifndef LEARN_CPP_EXERCISE_2_CUH
+#define LEARN_CPP_EXERCISE_2_CUH
 
 enum class Operation {
     Add,
@@ -33,4 +33,5 @@ struct Calculator {
 private:
     Operation op;
 };
-#endif //LEARN_CPP_EXERCISE_2_H
+
+#endif //LEARN_CPP_EXERCISE_2_CUH
