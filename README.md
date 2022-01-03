@@ -8,6 +8,7 @@
   * [strlen](#strlen)
   * [strcmp](#strcmp)
   * [strcpy](#strcpy)
+  * [string](#string)
 
 ## External
 
@@ -103,3 +104,55 @@ int main() {
   * 字符串拷贝，包括 null 终止符
 
 *声明的char指针字符串不能对里面的字符进行修改，但可以通过 ``strcpy`` 拷贝至新建的char数组，数组可以修改当中的字符元素*
+
+### string
+
+external/string_test.cpp
+
+```c++
+#include <string>
+#include <iostream>
+
+int main() {
+    // Creating a string from const char*
+    std::string string1 = "hello";
+
+    using namespace std::literals;
+    // Creating a string using string literal
+    auto string2 = "world"s;
+
+    // Concatenating strings
+    std::string string3 = string1 + " " + string2;
+
+    // Print out the result
+    std::cout << string3 << '\n';
+
+    std::string::size_type pos = string3.find(" ");
+    string1 = string3.substr(pos + 1); // the part after the space
+    string2 = string3.substr(0, pos);  // the part till the space
+
+    std::cout << string1 << ' ' << string2 << '\n';
+
+    // Accessing an element using subscript operator[]
+    std::cout << string1[0] << '\n';
+    string1[0] = 'W';
+    std::cout << string1 << '\n';
+    std::cout << "length " << string1.length() << '\n';
+    std::cout << "size " << string1.size() << '\n';
+    std::cout << "capacity " << string1.capacity() << '\n';
+    return 0;
+}
+```
+
+* ``std::string``
+  * C++加入的字符串对象
+* ``std::liternals`` -> ``std::literals::string_literals::operator""s``
+  * 生成一个``std::string`` 字符串直接量
+* ``std::string::find``
+  * 在字符串中寻找指定字符串返回其下标，如果未找到会返回 ``string::npos``
+* ``std::string::substr``
+  * 截取字符串中的一节生成新的字符串
+* ``std::string::length`` ``std::string::size``
+  * 获取字符串的长度
+* ``std::string::capacity``
+  * 获取这个字符串容器的总容量
