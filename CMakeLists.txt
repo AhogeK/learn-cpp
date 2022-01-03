@@ -9,3 +9,5 @@ file(GLOB CPP_CRASH_COURSE *.cpp crash-course/part_1/*.cpp crash-course/part_1/*
 add_executable(learn_cpp ${CPP_CRASH_COURSE})
 
 add_executable(strlenTest external/strlenTest.cpp)
+
+add_executable(strcmpTest external/strcmpTest.cpp)
