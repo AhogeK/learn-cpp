@@ -12,6 +12,7 @@
   * [内存单元与地址](#内存单元与地址)
   * [指针数组与数组指针](#指针数组与数组指针)
   * [const pointer](#const-pointer)
+  * [double pointer](#double-pointer)
 
 ## External
 
@@ -288,3 +289,31 @@ int main() {
 这里的代码用于区别 C++ 中 **constant pointer** | **pointer to constant** | **constant pointer to constant**
 
 非别代表 **指针不能修改替换为其他指针但指针存储的值地址可以被修改** | **指针存储的值地址不能被修改，但指针为变量可以修改为别的指针** | **两者均不能修改**
+
+### double pointer
+
+external/double_pointer_test.cpp
+
+```c++
+#include <cstdio>
+
+int main() {
+    int variable = 789;
+    // pointer for variable
+    int *pointer2;
+    // double pointer for ptr2
+    int **pointer1;
+    // storing address of var in ptr2
+    pointer2 = &variable;
+    // Storing address of ptr2 in ptr1
+    pointer1 = &pointer2;
+    // Displaying value of var using
+    // both single and double pointers
+    printf("Value of var = %d\n", variable);
+    printf("Value of var using single pointer = %d\n", *pointer2 );
+    printf("Value of var using double pointer = %d\n", **pointer1);
+    return 0;
+}
+```
+
+双指针，代码中 pointer2 指针指向整型变量789, 而指针 pointer1 指向指针 pointer2, pointer1 便是双指针
