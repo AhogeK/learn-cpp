@@ -11,6 +11,7 @@
   * [string](#string)
   * [内存单元与地址](#内存单元与地址)
   * [指针数组与数组指针](#指针数组与数组指针)
+  * [const pointer](#const-pointer)
 
 ## External
 
@@ -226,3 +227,64 @@ int main() {
 
 这里的代码主要用于学习区分指针数组还是数组指针，即 "Difference between pointer to an array and array of pointers"。
 区别在于一个是一个指针存储一个数组地址，而另一个是数组里的一个元素为一个指针，有序序列，后每一个元素都为前一个元素指针+1
+
+### const pointer
+
+external/const_pointer_test.cpp
+
+```c++
+#include <iostream>
+
+int main() {
+    int high{100};
+    int low{66};
+    const int *score{&high};
+    // Pointer variable are read from
+    // the right to left
+    std::cout << *score << " via score change ";
+    // Score is a pointer to integer
+    // which is constant *score = 78
+    // Error: *score = 78;
+    // It will give you an Error:
+    // assignment of read-only location
+    // ‘* score’ because value stored in
+    // constant cannot be changed
+    score = &low;
+    // This can be done here as we are
+    // changing the location where the
+    // score points now it points to low
+    std::cout << *score << "\n";
+
+    int numberA{90};
+    int numberB{50};
+    int *const ptr{&numberA};
+    std::cout << *ptr << " ";
+    std::cout << ptr << "\n";
+    // Address what it points to
+    *ptr = 56;
+    // Acceptable to change the
+    // value of numberA
+    // Error: assignment of read-only
+    // variable ‘ptr’
+    // ptr = &numberB;
+    std::cout << *ptr << " ";
+    std::cout << ptr << "\n";
+
+    // ptr points to a
+    const int *const ptr2{&numberA};
+    // *ptr = 90;
+    // Error: assignment of read-only
+    // location ‘*(const int*)ptr’
+    // ptr = &numberB;
+    // Error: assignment of read-only
+    // variable ‘ptr’
+    // Address of a
+    std::cout << ptr << " ";
+    // Value of a
+    std::cout << *ptr << "\n";
+}
+```
+
+这里的代码用于区别 C++ 中 **constant pointer** | **pointer to constant** | **constant pointer to constant**
+
+非别代表 **指针不能修改替换为其他指针但指针存储的值地址可以被修改** | **指针存储的值地址不能被修改，但指针为变量可以修改为别的指针** | **两者均不能修改**
