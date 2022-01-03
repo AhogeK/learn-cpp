@@ -9,6 +9,7 @@
   * [strcmp](#strcmp)
   * [strcpy](#strcpy)
   * [string](#string)
+  * [内存单元与地址](#内存单元与地址)
 
 ## External
 
@@ -156,3 +157,35 @@ int main() {
   * 获取字符串的长度
 * ``std::string::capacity``
   * 获取这个字符串容器的总容量
+
+### 内存单元与地址
+
+external/memory_cells_address_test.cpp
+
+```c++
+#include <iostream>
+
+int main() {
+    std::cout << "##################### 内存单元与地址 #######################" << '\n';
+    int a = 112;
+    float b = 3.14f;
+    int *c = &a;
+    float *d = &b;
+    std::cout << "a = 112 | b = 3.14f | *c = &b | *d = &b" << '\n';
+    std::cout << "a " << a << '\n';
+    std::cout << "b " << b << '\n';
+    std::cout << "c " << c << '\n';
+    std::cout << "d " << d << '\n';
+    std::cout << "&a " << &a << '\n';
+    std::cout << "&b " << &b << '\n';
+    std::cout << "&c " << &c << '\n';
+    std::cout << "&d " << &d << '\n';
+    std::cout << "c[0] " << c[0] << '\n';
+    std::cout << "d[0] " << d[0] << '\n';
+    std::cout << "*c " << *c << '\n';
+    std::cout << "*d " << *d << '\n';
+}
+```
+
+**这里主要认识 ``*`` 与 ``&`` 存取的区别，a 存储的是直接量 112，这个112有一个指定的地址位置即 &a，它可以被指针 ``*c`` 接收， 即 ``*c = &a`` 而此时 c即指针也有属于他自己的地址，并存储着
+a的地址，所以``*c``遍可以获取到112**
