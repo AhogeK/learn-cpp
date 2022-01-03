@@ -10,6 +10,7 @@
   * [strcpy](#strcpy)
   * [string](#string)
   * [内存单元与地址](#内存单元与地址)
+  * [指针数组与数组指针](#指针数组与数组指针)
 
 ## External
 
@@ -71,7 +72,7 @@ int main() {
     for (const char *cat: cats) {
         std::cout << cat << '\n';
     }
-    return 0;https://en.cppreference.com/w/cpp/memory/unique_ptr
+    return 0;
 }
 ```
 
@@ -189,3 +190,39 @@ int main() {
 
 **这里主要认识 ``*`` 与 ``&`` 存取的区别，a 存储的是直接量 112，这个112有一个指定的地址位置即 &a，它可以被指针 ``*c`` 接收， 即 ``*c = &a`` 而此时 c即指针也有属于他自己的地址，并存储着
 a的地址，所以``*c``遍可以获取到112**
+
+### 指针数组与数组指针
+
+external/pointer_array_test.cpp
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Pointer to an integer
+    int *p;
+
+    // Pointer to an array of 5 integers
+    int (*ptr)[5];
+    int arr[5] = {1, 2, 3, 4, 5};
+
+    // Points to 0th element of the arr.
+    p = arr;
+
+    // Points to the whole array arr.
+    ptr = &arr;
+
+    cout << "p = " << p << ", ptr = " << ptr << endl;
+    cout << "p = " << *p << ", ptr = " << **ptr << endl;
+    p++;
+    ptr++;
+    cout << "p = " << p << ", ptr = " << ptr << endl;
+    cout << "p = " << *p << ", ptr = " << **ptr << endl;
+    return 0;
+}
+```
+
+这里的代码主要用于学习区分指针数组还是数组指针，即 "Difference between pointer to an array and array of pointers"。
+区别在于一个是一个指针存储一个数组地址，而另一个是数组里的一个元素为一个指针，有序序列，后每一个元素都为前一个元素指针+1
