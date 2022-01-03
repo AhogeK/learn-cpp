@@ -7,6 +7,7 @@
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
+  * [strcpy](#strcpy)
 
 ## External
 
@@ -14,7 +15,7 @@
 
 ### strlen
 
-external/strlenTest.cpp
+external/strlen_test.cpp
 
 ```c++
 #include <cstdio>
@@ -51,7 +52,7 @@ int main() {
 
 ### strcmp
 
-external/strcmpTest.cpp
+external/strcmp_test.cpp
 
 ```c++
 #include <vector>
@@ -68,7 +69,7 @@ int main() {
     for (const char *cat: cats) {
         std::cout << cat << '\n';
     }
-    return 0;
+    return 0;https://en.cppreference.com/w/cpp/memory/unique_ptr
 }
 ```
 
@@ -76,3 +77,29 @@ int main() {
   * 排序函数，可通过第三个参数利用lambda自定义，return true 位置不变，false交换
 * ``std::strcmp``
   * 比较两个字符串，以首字母的asc码进行比较，左比右小负数，相同为0，左比右大正数，首字母相同会接着往下逐个比较
+
+### strcpy
+
+external/strcpy_test.cpp
+
+```c++
+#include <memory>
+#include <cstring>
+#include <iostream>
+
+int main() {
+    const char *src = "Take the test.";
+    //  src[0] = 'M'; // can't modify string literal
+    auto dst = std::make_unique<char[]>(std::strlen(src) + 1); // +1 for the null terminator
+    std::strcpy(dst.get(), src);
+    dst[0] = 'M';
+    std::cout << src << '\n' << dst.get() << '\n';
+}
+```
+
+* ``std::make_unique``
+  * 构建一个对象被并 [std::unique_ptr](https://en.cppreference.com/w/cpp/memory/unique_ptr) 包装
+* ``std::strcpy``
+  * 字符串拷贝，包括 null 终止符
+
+*声明的char指针字符串不能对里面的字符进行修改，但可以通过 ``strcpy`` 拷贝至新建的char数组，数组可以修改当中的字符元素*

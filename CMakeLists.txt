@@ -8,6 +8,6 @@ file(GLOB CPP_CRASH_COURSE *.cpp crash-course/part-1/*.cpp crash-course/part-1/*
 
 add_executable(learn_cpp ${CPP_CRASH_COURSE})
 
-add_executable(strlenTest external/strlenTest.cpp)
-
-add_executable(strcmpTest external/strcmpTest.cpp)
+add_executable(strlen_test external/strlen_test.cpp)
+add_executable(strcmp_test external/strcmp_test.cpp)
+add_executable(strcpy_test external/strcpy_test.cpp)
