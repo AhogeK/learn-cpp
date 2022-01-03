@@ -1,8 +1,8 @@
 #include <iostream>
-#include "crash-course/part-1/listing_1.cuh"
-#include "crash-course/part-1/exercise_1.cuh"
-#include "crash-course/part-1/listing_2.cuh"
-#include "crash-course/part-1/exercise_2.cuh"
+#include "crash-course/part-1/listing_1.h"
+#include "crash-course/part-1/exercise_1.h"
+#include "crash-course/part-1/listing_2.h"
+#include "crash-course/part-1/exercise_2.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;

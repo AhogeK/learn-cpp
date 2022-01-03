@@ -2,8 +2,8 @@
 // Created by ahogek on 9/26/21.
 //
 
-#ifndef LEARN_CPP_LISTING_2_CUH
-#define LEARN_CPP_LISTING_2_CUH
+#ifndef LEARN_CPP_LISTING_2_H
+#define LEARN_CPP_LISTING_2_H
 
 #include <cstdint>
 #include <cstddef>
@@ -175,4 +175,4 @@ void listing_2_25();
 
 void listing_2_27();
 
-#endif //LEARN_CPP_LISTING_2_CUH
+#endif //LEARN_CPP_LISTING_2_H

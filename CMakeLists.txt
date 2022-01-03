@@ -4,7 +4,7 @@ project(learn_cpp)
 set(CMAKE_CXX_STANDARD 17)
 
 
-file(GLOB CPP_CRASH_COURSE *.cpp crash-course/part_1/*.cpp crash-course/part_1/*.cuh)
+file(GLOB CPP_CRASH_COURSE *.cpp crash-course/part-1/*.cpp crash-course/part-1/*.h)
 
 add_executable(learn_cpp ${CPP_CRASH_COURSE})
 

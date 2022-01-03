@@ -1,7 +1,7 @@
 //
 // Created by ahogek on 9/26/21.
 //
-#include "listing_2.cuh"
+#include "listing_2.h"
 
 /**
  * 一个指定一些整型变量利用不同的进制进行打印的程序
