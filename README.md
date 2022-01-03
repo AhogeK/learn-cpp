@@ -13,6 +13,7 @@
   * [指针数组与数组指针](#指针数组与数组指针)
   * [const pointer](#const-pointer)
   * [double pointer](#double-pointer)
+  * [illegal pointer](#illegal-pointer)
 
 ## External
 
@@ -317,3 +318,36 @@ int main() {
 ```
 
 双指针，代码中 pointer2 指针指向整型变量789, 而指针 pointer1 指向指针 pointer2, pointer1 便是双指针
+
+### illegal pointer
+
+external/illegal_pointer_test.cpp
+
+```c++
+#include <cstdio>
+
+int main() {
+    int some = 20;
+    int *iptr = &some;  /* iptr initialized with address of 'some' */
+    printf("\nAddress of integer \'some\' in exp. \'int some = 20\' is %p\n"
+           "and where \'iptr\' is pointing to, in exp. 'int *iptr = &some',"
+           " is\n%p\n", &some, iptr);
+    printf("\nLet's see what happens when we access initialized pointer "
+           "\'ptr\' in exp.\n\'int *iptr = &some\'\n");
+    printf("This gives Value %d of variable \'some\'\n\n", *iptr);
+
+    int *ip1;   /* ip1 declared pointer-to-integer, but not initialized */
+    int *ip2;   /* ip2 declared pointer-to-integer, but not initialized */
+    char *cp;   /* cp declared pointer-to-character, but not initialized */
+    float *fp;  /* fp declared pointer-to-float, but not initialized */
+    printf("Default Address \'ip1\' holds as %p\n", ip1);
+    printf("Default Address \'ip2\' holds as %p\n", ip2);
+    printf("Default Address \'cp\' holds as %p\n", cp);
+    printf("Default Address \'fp\' holds as %p\n", fp);
+    printf("\nNow, see, what happens when we access uninitialized pointers"
+           "...\n");
+    printf("%d %d %c %f\n", *ip1, *ip2, *cp, *fp);
+    return 0;
+```
+
+这里的这段代码主要展示了C中当使用输出未初始化不合法的指针会发生什么。
