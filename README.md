@@ -3,6 +3,7 @@
 > cpp 学习代码练习
 
 ## External
+> External 代表非 《C++ CRASH COURSE》中的内容，目前 ``external`` 中的练习为 慕课C++课程练习内容
 
 external/strlenTest.cpp
 
