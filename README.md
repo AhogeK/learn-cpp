@@ -14,6 +14,7 @@
   * [const pointer](#const-pointer)
   * [double pointer](#double-pointer)
   * [illegal pointer](#illegal-pointer)
+  * [两种指针+1的区别](#两种指针+1的区别)
 
 ## External
 
@@ -360,3 +361,10 @@ int main() {
 * 指针操作超越了变量范围
 
 **没有初始化的，不用的，超出范围的指针的指针建议设置成 NULL/nullptr**
+
+### 两种指针+1的区别
+
+* *p + 1
+  * 代表指针存储的指向的地址的值+1 如 *p = 1 则 *p + 1 = 2
+* *(p + 1)
+  * 代表指针的地址+1
