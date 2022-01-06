@@ -28,3 +28,7 @@ void good() {
     f();                               // if f() throws an exception, the mutex is released
     if (!everything_ok()) return;       // early return, the mutex is released
 }                                      // if good() returns normally, the mutex is released
+
+int main() {
+    return 0;
+}
