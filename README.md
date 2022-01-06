@@ -590,7 +590,7 @@ RAII 标准库
       struct C {int* data;};
       
       int main () {
-      std::shared_ptr<int> sp (new int);
+          std::shared_ptr<int> sp (new int);
       
           std::weak_ptr<int> wp1;
           std::weak_ptr<int> wp2 (wp1);
@@ -604,6 +604,8 @@ RAII 标准库
           return 0;
       }
       ```
+      **weak_ptr 被设计为与 shared_ptr共同工作避免发生循环引用**
+
       [更多](https://www.cplusplus.com/reference/memory/weak_ptr/)
   * std::lock_guard
   * std::unique_lock
