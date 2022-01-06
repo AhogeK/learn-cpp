@@ -404,6 +404,11 @@ int main() {
 
 **没有初始化的，不用的，超出范围的指针的指针建议设置成 NULL/nullptr**
 
+大量的空指针野指针会造成内存泄露问题
+
+* 使用智能指针
+* 使用引用
+
 ### 两种指针+1的区别
 
 * *p + 1
@@ -493,6 +498,23 @@ RAII 标准库
   * std::lock_guard
   * std::unique_lock
   * std::shared_lock
+  * std::auto_ptr
+    * ```c++
+      #include <memory>
+      #include <iostream>
+
+      int main() {
+          std::auto_ptr<int> p1 (new int);
+          *p1.get()=10;
+
+          std::auto_ptr<int> p2 (p1);
+
+          std::cout << "p2 points to " << *p2 << '\n';
+          // (p1 is now null-pointer auto_ptr)
+          // std::cout << "p1 " << *p1 << '\n';
+          return 0;
+      }
+      ```
 
 ### 栈堆的区别
 
