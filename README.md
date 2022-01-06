@@ -15,6 +15,7 @@
   * [double pointer](#double-pointer)
   * [illegal pointer](#illegal-pointer)
   * [两种指针+1的区别](#两种指针+1的区别)
+  * [不同指针自增的区别](#不同指针自增的区别)
 
 ## External
 
@@ -368,3 +369,29 @@ int main() {
   * 代表指针存储的指向的地址的值+1 如 *p = 1 则 *p + 1 = 2
 * *(p + 1)
   * 代表指针的地址+1
+
+### 不同指针自增的区别
+
+```c++
+#include <cstdio>
+
+int main() {
+    int arr[] = {10, 20, 30};
+    int *p = arr;
+    printf("arr[0] = %d, arr[1] = %d, *p = %d\n",
+           arr[0], arr[1], *p);
+    // 指针值自增
+    ++*p;
+    printf("arr[0] = %d, arr[1] = %d, *p = %d\n",
+           arr[0], arr[1], *p);
+    // 指针地址自增
+    *p++;
+    printf("arr[0] = %d, arr[1] = %d, *p = %d\n",
+           arr[0], arr[1], *p);
+    // 指针地址自增
+    *++p;
+    printf("arr[0] = %d, arr[1] = %d, *p = %d",
+           arr[0], arr[1], *p);
+    return 0;
+}
+```
