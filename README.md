@@ -16,6 +16,7 @@
   * [illegal pointer](#illegal-pointer)
   * [两种指针+1的区别](#两种指针+1的区别)
   * [不同指针自增的区别](#不同指针自增的区别)
+  * [RAII](#raii)
 
 ## External
 
@@ -434,3 +435,60 @@ int main() {
     return 0;
 }
 ```
+
+### RAII
+
+```c++
+#include <mutex>
+#include <iostream>
+
+std::mutex m;
+
+void f() {
+    throw std::runtime_error("111");
+}
+
+bool everything_ok() {
+    std::cout << "ok" << "\n";
+    return true;
+}
+
+void bad()
+{
+    m.lock();                    // acquire the mutex
+    f();                         // if f() throws an exception, the mutex is never released
+    if(!everything_ok()) return; // early return, the mutex is never released
+    m.unlock();                  // if bad() reaches this statement, the mutex is released
+}
+
+void good()
+{
+    std::lock_guard<std::mutex> lk(m); // RAII class: mutex acquisition is initialization
+    f();                               // if f() throws an exception, the mutex is released
+    if(!everything_ok()) return;       // early return, the mutex is released
+}
+```
+
+总结
+
+* 封装资源到 class
+  * 在构造获取资源，如果获取不到设置其默认值，或抛出异常
+  * 在解构释放资源，不再抛出异常
+* 要通过 RAII class 实例来获取使用资源
+  * 有自动存储持续时间
+  * 在自动或临时对象拥有界定的生命周期
+
+**Classes with open()/close(), lock()/unlock(), or init()/copyFrom()/destroy() member functions are typical examples of
+non-RAII classes**
+
+RAII 标准库
+
+* std::string
+* std::vector
+* std::jthread
+* 标准封装库
+  * std::unique_ptr
+  * std::shared_ptr
+  * std::lock_guard
+  * std::unique_lock
+  * std::shared_lock

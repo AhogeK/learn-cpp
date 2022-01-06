@@ -8,6 +8,7 @@ file(GLOB CPP_CRASH_COURSE *.cpp crash-course/part-1/*.cpp crash-course/part-1/*
 
 add_executable(learn_cpp ${CPP_CRASH_COURSE})
 
+# External
 add_executable(strlen_test external/strlen_test.cpp)
 add_executable(strcmp_test external/strcmp_test.cpp)
 add_executable(strcpy_test external/strcpy_test.cpp)
@@ -19,3 +20,4 @@ add_executable(double_pointer_test external/double_pointer_test.cpp)
 add_executable(illegal_pointer_test external/illegal_pointer_test.cpp)
 add_executable(pointer_increment_test external/pointer_increment_test.cpp)
 add_executable(memory_layout_test external/memory_layout_test.cpp)
+add_executable(raii_test external/raii_test.cpp)
