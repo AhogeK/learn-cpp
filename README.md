@@ -210,6 +210,31 @@ C++ 中每行代码在内存中都会有相应的内存存储地址
 
 对象变量为 (heap)堆区变量
 
+#### Memory Layout of C Programs
+
+C 语言在内存中的组成：
+
+* Text segment (i.e. instructions)
+* Initialized data segment
+* Uninitialized data segment  (bss)
+* Heap
+* Stack
+
+![memory layout of c programs](https://media.geeksforgeeks.org/wp-content/uploads/memoryLayoutC.jpg)
+
+```c++
+int global; /* Uninitialized variable stored in bss*/
+int global2 = 10; /* initialized global variable stored in DS*/
+
+int main() {
+    static int i; /* Uninitialized static variable stored in bss */
+    static int j = 100; /* Initialized static variable stored in DS*/
+    return 0;
+}
+```
+
+可以使用 ``gcc`` 编译后用 ``size`` 指令查看 ``text data bss dec hex``
+
 ### 指针数组与数组指针
 
 external/pointer_array_test.cpp
