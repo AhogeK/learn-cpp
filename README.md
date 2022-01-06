@@ -17,6 +17,7 @@
   * [两种指针+1的区别](#两种指针+1的区别)
   * [不同指针自增的区别](#不同指针自增的区别)
   * [RAII](#raii)
+  * [栈堆的区别](#栈堆的区别)
 
 ## External
 
@@ -492,3 +493,25 @@ RAII 标准库
   * std::lock_guard
   * std::unique_lock
   * std::shared_lock
+
+### 栈堆的区别
+
+![stack and heap](https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/2022-01-06_14-36.png)
+
+**[Stack vs Heap Memory Allocation](https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/)**
+
+```c++
+int main() {
+    // All these variables get memory
+    // allocated on stack
+    int a;
+    int b[10];
+    int n = 20;
+    int c[n];
+
+    // This memory for 10 integers
+    // is allocated on heap.
+    int *ptr  = new int[10];
+    return 0;
+}
+```
