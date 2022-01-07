@@ -5,14 +5,6 @@
 #include <iostream>
 #include "listing_1.h"
 
-
-void a_program_with_conditional_behavior() {
-    int x = 0;
-    if (x > 0) printf("Positive. \n");
-    else if (x < 0) printf("Negative. \n");
-    else printf("Zero. \n");
-}
-
 int step_function(int x) {
     int result = 0;
     if (x < 0) {
@@ -44,4 +36,15 @@ void listing_1_2() {
     std::cout << "123 >= x" << (123 >= x) << '\n'; //Greater than or equal to
     std::cout << "-10 < x" << (-10 < x) << '\n'; // Less than
     std::cout << "-99 <= x" << (-99 <= x) << '\n'; // Less than or equal to
+}
+
+/**
+ * Conditional Statements
+ * Listing 1-4: A program with conditional behavior
+ */
+void listing_1_4() {
+    int x = 0;
+    if (x > 0) printf("Positive.\n");
+    else if (x < 0) printf("Negative.\n");
+    else printf("Zero.\n");
 }

@@ -6,10 +6,15 @@
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    a_program_with_conditional_behavior();
+
     std::cout << "-------------------------------" << std::endl;
     std::cout << "listing_1_2: " << std::endl;
     listing_1_2();
+
+    std::cout << "-------------------------------" << std::endl;
+    std::cout << "listing_1_4: " << std::endl;
+    listing_1_4();
+
     std::cout << "-------------------------------" << std::endl;
     std::cout << "listing_1_7: " << std::endl;
     listing_1_7();

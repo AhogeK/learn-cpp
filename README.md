@@ -9,6 +9,7 @@
     * [1 UP AND RUNNING](#1-up-and-running)
       * [Conditional Statements](#conditional-statements)
         * [A program using comparison operators](#a-program-using-comparison-operators)
+        * [A program with conditional behavior](#a-program-with-conditional-behavior)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -45,6 +46,17 @@ void listing_1_2() {
     std::cout << "123 >= x" << (123 >= x) << '\n'; //Greater than or equal to
     std::cout << "-10 < x" << (-10 < x) << '\n'; // Less than
     std::cout << "-99 <= x" << (-99 <= x) << '\n'; // Less than or equal to
+}
+```
+
+###### A program with conditional behavior
+
+```c++
+void listing_1_4() {
+    int x = 0;
+    if (x > 0) printf("Positive.\n");
+    else if (x < 0) printf("Negative.\n");
+    else printf("Zero.\n");
 }
 ```
 

@@ -5,9 +5,9 @@
 #ifndef LEARN_CPP_LISTING_1_H
 #define LEARN_CPP_LISTING_1_H
 
-void a_program_with_conditional_behavior();
-
 void listing_1_2();
+
+void listing_1_4();
 
 void listing_1_7();
 
