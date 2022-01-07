@@ -19,6 +19,7 @@
         * [Listing 1-6](#listing-1-6)
       * [Calling Functions](#calling-functions)
         * [Listing 1-7](#listing-1-7)
+      * [Revisiting step_function](#Revisiting-step_function)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -131,6 +132,27 @@ void listing_1_7() {
     int val2 = step_function(0);
     int val3 = step_function(-100);
     printf("val1: %d, val2: %d, val3: %d\n", val1, val2, val3);
+}
+```
+
+##### Revisiting step_function
+
+###### Listing 1-8
+
+```c++
+void listing_1_8() {
+    int num1 = 42;
+    int result1 = step_function(num1);
+
+    int num2 = 0;
+    int result2 = step_function(num2);
+
+    int num3 = -32767;
+    int result3 = step_function(num3);
+
+    printf("Num1: %d, Step: %d\n", num1, result1);
+    printf("Num2: %d, Step: %d\n", num2, result2);
+    printf("Num3: %d, Step: %d\n", num3, result3);
 }
 ```
 
