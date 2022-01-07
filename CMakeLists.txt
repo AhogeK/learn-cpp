@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(learn_cpp)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
 
 file(GLOB CPP_CRASH_COURSE *.cpp crash-course/part-1/*.cpp crash-course/part-1/*.h)
@@ -28,3 +28,4 @@ add_executable(shared_ptr_test external/shared_ptr_test.cpp)
 add_executable(week_ptr_test external/week_ptr_test.cpp)
 add_executable(circular_dependency_test external/circular_dependency_test.cpp)
 add_executable(reference_test external/reference_test.cpp)
+add_executable(enum_test external/enum_test.cpp)
