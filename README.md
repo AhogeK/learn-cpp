@@ -20,6 +20,8 @@
       * [Calling Functions](#calling-functions)
         * [Listing 1-7](#listing-1-7)
       * [Revisiting step_function](#Revisiting-step_function)
+        * [Listing 1-8](#listing-1-8)
+      * [GCC and Clang Debugging with GDB](#gcc-and-clang-debugging-with-gdb)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -140,6 +142,18 @@ void listing_1_7() {
 ###### Listing 1-8
 
 ```c++
+int step_function(int x) {
+    int result = 0;
+    if (x < 0) {
+        result = -1;
+    } else if (x > 0) {
+        result = 1;
+    } else {
+        result = 0;
+    }
+    return result;
+}
+
 void listing_1_8() {
     int num1 = 42;
     int result1 = step_function(num1);
@@ -154,6 +168,39 @@ void listing_1_8() {
     printf("Num2: %d, Step: %d\n", num2, result2);
     printf("Num3: %d, Step: %d\n", num3, result3);
 }
+```
+
+##### GCC and Clang Debugging with GDB
+
+```shell
+# 先编译
+gdb gdb_test
+
+# 打断点
+(gdb) break main.cpp:5
+# or
+(gdb) break main
+
+# 执行
+(gdb) run
+
+# 下一步 可回车的方式
+(gdb) step
+
+# 结束
+(gdb) finish
+
+# 进入方法
+(gdb) next
+
+# 查看当前变量值
+(gdb) info locals
+
+# 直接执行到下一个断点
+(gdb) continue
+
+# 退出 gdb
+(gdb) quit
 ```
 
 ## External
