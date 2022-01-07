@@ -7,8 +7,11 @@
 * [C++ CRASH COURSE](#c++-crash-course)
   * [PART I THE C++ CORE LANGUAGE](#part-i-the-c++-core-language)
     * [1 UP AND RUNNING](#1-up-and-running)
+      * [The Structure of a Basic C++ Program](#the-structure-of-a-basic-c++-program)
+        * [Your first C++ program prints Hello,world! to the screen](#your-first-c++-program-prints-hello,world!-to-the-screen)
       * [Conditional Statements](#conditional-statements)
         * [A program using comparison operators](#a-program-using-comparison-operators)
+        * [An if statement with else if and else branches](#an-if-statement-with-else-if-and-else-branches)
         * [A program with conditional behavior](#a-program-with-conditional-behavior)
 * [External](#external)
   * [strlen](#strlen)
@@ -33,6 +36,19 @@
 
 #### 1 UP AND RUNNING
 
+##### The Structure of a Basic C++ Program
+
+###### Your first C++ program prints Hello,world! to the screen
+
+```c++
+# include <cstdio>
+
+int main() {
+    printf("Hello, world!");
+    return 0;
+}
+```
+
 ##### Conditional Statements
 
 ###### A program using comparison operators
@@ -47,6 +63,14 @@ void listing_1_2() {
     std::cout << "-10 < x" << (-10 < x) << '\n'; // Less than
     std::cout << "-99 <= x" << (-99 <= x) << '\n'; // Less than or equal to
 }
+```
+
+###### An if statement with else if and else branches
+
+```c++
+if (boolean-expression-1) statement-1
+else if (boolean-expression-2) statement-2
+else statement-3
 ```
 
 ###### A program with conditional behavior
