@@ -18,6 +18,7 @@
   * [不同指针自增的区别](#不同指针自增的区别)
   * [RAII](#raii)
   * [栈堆的区别](#栈堆的区别)
+  * [引用](#引用)
 
 ## External
 
@@ -682,3 +683,27 @@ int main() {
     return 0;
 }
 ```
+
+### 引用
+
+```c++
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    string food = "Pizza";
+    string &meal = food;
+
+    cout << food << "\n";  // Outputs Pizza
+    cout << meal << "\n";  // Outputs Pizza
+}
+```
+
+引用是一种特殊的指针，不允许修改的指针，支持函数运算符的重载，兼容C语言
+
+- 不存在空引用
+- 必须初始化
+- 一个引用永远指向它初始化的那个对象
+
