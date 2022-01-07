@@ -17,6 +17,8 @@
         * [The general syntax for a C++ function](#the-general-syntax-for-a-c-function)
       * [A Step Function](#a-step-function)
         * [Listing 1-6](#listing-1-6)
+      * [Calling Functions](#calling-functions)
+        * [Listing 1-7](#listing-1-7)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -116,6 +118,19 @@ int listing_1_6(int x) {
         result = 1;
     }
     return result;
+}
+```
+
+##### Calling Functions
+
+###### Listing 1-7
+
+```c++
+void listing_1_7() {
+    int val1 = step_function(100);
+    int val2 = step_function(0);
+    int val3 = step_function(-100);
+    printf("val1: %d, val2: %d, val3: %d\n", val1, val2, val3);
 }
 ```
 
