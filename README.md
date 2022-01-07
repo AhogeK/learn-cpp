@@ -4,11 +4,11 @@
 
 ## 目录
 
-* [C++ CRASH COURSE](#c++-crash-course)
-  * [PART I THE C++ CORE LANGUAGE](#part-i-the-c++-core-language)
+* [C++ CRASH COURSE](#c-crash-course)
+  * [PART I THE C++ CORE LANGUAGE](#part-i-the-c-core-language)
     * [1 UP AND RUNNING](#1-up-and-running)
-      * [The Structure of a Basic C++ Program](#the-structure-of-a-basic-c++-program)
-        * [Your first C++ program prints Hello,world! to the screen](#your-first-c++-program-prints-hello,world!-to-the-screen)
+      * [The Structure of a Basic C++ Program](#the-structure-of-a-basic-c-program)
+        * [Your first C++ program prints Hello,world! to the screen](#your-first-c-program-prints-helloworld-to-the-screen)
       * [Conditional Statements](#conditional-statements)
         * [A program using comparison operators](#a-program-using-comparison-operators)
         * [An if statement with else if and else branches](#an-if-statement-with-else-if-and-else-branches)
