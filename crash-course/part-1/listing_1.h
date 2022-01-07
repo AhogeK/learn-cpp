@@ -7,6 +7,8 @@
 
 void a_program_with_conditional_behavior();
 
+void listing_1_2();
+
 void listing_1_7();
 
 #endif //LEARN_CPP_LISTING_1_H

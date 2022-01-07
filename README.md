@@ -4,6 +4,11 @@
 
 ## 目录
 
+* [C++ CRASH COURSE](#c++-crash-course)
+  * [PART I THE C++ CORE LANGUAGE](#part-i-the-c++-core-language)
+    * [1 UP AND RUNNING](#1-up-and-running)
+      * [Conditional Statements](#conditional-statements)
+        * [A program using comparison operators](#a-program-using-comparison-operators)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -20,6 +25,28 @@
   * [栈堆的区别](#栈堆的区别)
   * [引用](#引用)
   * [enum](#enum)
+
+## C++ CRASH COURSE
+
+### PART I THE C++ CORE LANGUAGE
+
+#### 1 UP AND RUNNING
+
+##### Conditional Statements
+
+###### A program using comparison operators
+
+```c++
+void listing_1_2() {
+    int x = 0;
+    std::cout << "42 == x" << (42 == x) << '\n'; // Equality
+    std::cout << "42 != x" << (42 != x) << '\n'; // Inequality
+    std::cout << "100 > x" << (100 > x) << '\n'; // greater than
+    std::cout << "123 >= x" << (123 >= x) << '\n'; //Greater than or equal to
+    std::cout << "-10 < x" << (-10 < x) << '\n'; // Less than
+    std::cout << "-99 <= x" << (-99 <= x) << '\n'; // Less than or equal to
+}
+```
 
 ## External
 
