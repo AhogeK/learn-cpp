@@ -13,6 +13,8 @@
         * [A program using comparison operators](#a-program-using-comparison-operators)
         * [An if statement with else if and else branches](#an-if-statement-with-else-if-and-else-branches)
         * [A program with conditional behavior](#a-program-with-conditional-behavior)
+      * [Functions](#functions)
+        * [The general syntax for a C++ function](#the-general-syntax-for-a-c-function)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -81,6 +83,17 @@ void listing_1_4() {
     if (x > 0) printf("Positive.\n");
     else if (x < 0) printf("Negative.\n");
     else printf("Zero.\n");
+}
+```
+
+##### Functions
+
+###### The general syntax for a C++ function
+
+```c++
+return-type function_name(par-type1 par_name1, par-type2 par_name2) {
+    --snip--
+    return return-value;
 }
 ```
 
