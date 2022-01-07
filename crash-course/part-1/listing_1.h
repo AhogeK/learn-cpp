@@ -9,6 +9,8 @@ void listing_1_2();
 
 void listing_1_4();
 
+int listing_1_6(int);
+
 void listing_1_7();
 
 #endif //LEARN_CPP_LISTING_1_H

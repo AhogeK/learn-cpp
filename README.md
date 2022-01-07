@@ -15,6 +15,8 @@
         * [A program with conditional behavior](#a-program-with-conditional-behavior)
       * [Functions](#functions)
         * [The general syntax for a C++ function](#the-general-syntax-for-a-c-function)
+      * [A Step Function](#a-step-function)
+        * [Listing 1-6](#listing-1-6)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -94,6 +96,26 @@ void listing_1_4() {
 return-type function_name(par-type1 par_name1, par-type2 par_name2) {
     --snip--
     return return-value;
+}
+```
+
+##### A Step Function
+
+###### Listing 1-6
+
+> A step function that returns - 1 for negative values, 0 for zero, and 1 for positive values
+
+```c++
+int listing_1_6(int x) {
+    int result = 0;
+    if (x < 0) {
+        result = -1;
+    } else if (x > 0) {
+        result = 1;
+    } else {
+        result = 1;
+    }
+    return result;
 }
 ```
 

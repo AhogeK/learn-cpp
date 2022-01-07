@@ -48,3 +48,19 @@ void listing_1_4() {
     else if (x < 0) printf("Negative.\n");
     else printf("Zero.\n");
 }
+
+/**
+ * A Step Function
+ * Listing 1-6:  A step function that returns - 1 for negative values, 0 for zero, and 1 for positive values
+ */
+int listing_1_6(int x) {
+    int result = 0;
+    if (x < 0) {
+        result = -1;
+    } else if (x > 0) {
+        result = 1;
+    } else {
+        result = 1;
+    }
+    return result;
+}
