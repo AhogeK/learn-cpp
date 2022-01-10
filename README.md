@@ -25,6 +25,9 @@
       * [EXERCISES](#exercises)
         * [1-1](#1-1)
         * [1-4](#1-4)
+    * [2 TYPES](#2-types)
+      * [Fundamental Types](#fundamental-types)
+        * [Listing 2-1](#listing-2-1)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -237,6 +240,28 @@ int sum(int a, int b) {
 void exercise_1_4() {
     int a = -10, b = 12;
     printf("%d + %d = %d\n", a, b, sum(a, b));
+}
+```
+
+#### 2 TYPES
+
+##### Fundamental Types
+
+###### Listing 2-1
+
+> Listing 2-1: A program that assigns several integer variables and prints them with the appropriate format specifier
+
+```c++
+/**
+ * 一个指定一些整型变量利用不同的进制进行打印的程序
+ */
+void listing_2_1() {
+    unsigned short a = 0b10101010;
+    printf("%hu\n", a);
+    int b = 0123;
+    printf("%d\n", b);
+    unsigned long long d = 0xFFFFFFFFFFFFFFF;
+    printf("%llu\n", d);
 }
 ```
 
