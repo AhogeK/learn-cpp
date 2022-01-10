@@ -22,6 +22,8 @@
       * [Revisiting step_function](#Revisiting-step_function)
         * [Listing 1-8](#listing-1-8)
       * [GCC and Clang Debugging with GDB](#gcc-and-clang-debugging-with-gdb)
+      * [EXERCISES](#exercises)
+        * [1-1](#1-1)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -201,6 +203,25 @@ gdb gdb_test
 
 # 退出 gdb
 (gdb) quit
+```
+
+##### EXERCISES
+
+###### 1-1
+
+> Create a function called ``absolute_value`` that returns the absolute value of its single argument.The absolute value of
+> an integer x is the following: x(itself) if x is greater than or equal to 0; otherwise, it is x times -1.
+
+```c++
+int absolute_value(int x) {
+  if (x >= 0) return x;
+  else return x * -1;
+}
+
+void exercise_1_1() {
+    int my_num = -10;
+    printf("The absolute value of %d is %d. \n", my_num, absolute_value(my_num));
+}
 ```
 
 ## External
