@@ -24,6 +24,7 @@
       * [GCC and Clang Debugging with GDB](#gcc-and-clang-debugging-with-gdb)
       * [EXERCISES](#exercises)
         * [1-1](#1-1)
+        * [1-4](#1-4)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -221,6 +222,21 @@ int absolute_value(int x) {
 void exercise_1_1() {
     int my_num = -10;
     printf("The absolute value of %d is %d. \n", my_num, absolute_value(my_num));
+}
+```
+
+###### 1-4
+
+> Write another function called ``sum`` that takes two ``int`` arguments and returns their sum.
+
+```c++
+int sum(int a, int b) {
+    return a + b;
+}
+
+void exercise_1_4() {
+    int a = -10, b = 12;
+    printf("%d + %d = %d\n", a, b, sum(a, b));
 }
 ```
 
