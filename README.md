@@ -45,6 +45,7 @@
   * [引用](#引用)
   * [enum](#enum)
   * [结构体与联合体](#结构体与联合体)
+  * [结构体的内部布局](#结构体的内部布局)
 
 ## C++ CRASH COURSE
 
@@ -1135,3 +1136,65 @@ int main() {
     return 0;
 }
 ```
+
+### 结构体的内部布局
+
+```c++
+#include <cstdio>
+
+// Alignment requirements
+// (typical 32 bit machine)
+
+// char         1 byte
+// short int    2 bytes
+// int          4 bytes
+// double       8 bytes
+
+// structure A
+
+using structa_t = struct structa_tag {
+    char c;
+    short int s;
+};
+
+// structure B
+using structb_t = struct structb_tag {
+    short int s;
+    char c;
+    int i;
+};
+
+// structure C
+using structc_t = struct structc_tag {
+    char c;
+    double d;
+    int s;
+};
+
+// structure D
+using structd_t = struct structd_tag {
+    double d;
+    int s;
+    char c;
+};
+
+int main() {
+    printf("sizeof(structa_t) = %lu\n", sizeof(structa_t));
+    printf("sizeof(structb_t) = %lu\n", sizeof(structb_t));
+    printf("sizeof(structc_t) = %lu\n", sizeof(structc_t));
+    printf("sizeof(structd_t) = %lu\n", sizeof(structd_t));
+
+    return 0;
+}
+```
+
+结构体的内存布局关键在于数据对齐，例如 ``structb_t`` 包含 ``short int`` 两字节而 ``char`` 一字节
+两个相加不满四字节，但算上 ``int`` 的四字节又超了四字节所以 ``short int`` 与 ``char`` 组一起并补满四字节
+并加上 ``int`` 的四字节, 所以 ``structb_t`` 为 8 字节 即 64 位系统的一组
+
+又例如 ``structc_t`` 包含 ``char`` 一字节 ``double`` 八字节 两个相加超了八字节，所以 ``double`` 单个八字节一组，
+因为 64 位系统的关系，``char`` 需要补七字节满八字节，而最后 ``int`` 为四字节，因为要与上 ``double`` 的八字节对齐，因此
+``int`` 也要补四字节满八字节，所以 ``structc_t`` 总要占 24 字节
+
+而例如最后的 ``structd_t``, 第一个为 ``double`` 自满八字节一组, 而 ``int`` 为四字节不能八字节余下的四字节够 ``char`` 的一字节使用, 
+剩下的三字节在于 ``double`` 对齐补满, 所以总占 16 字节
