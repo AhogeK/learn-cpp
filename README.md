@@ -296,7 +296,7 @@ void listing_2_3() {
     printf("Avogaadro's Number: %le %lf %lg\n", an, an, an);
     float hp = 9.75;
     printf("Hogwarts' Platform: %e %f %g\n", hp, hp, hp);
-}jj
+}
 ```
 
 ## External
