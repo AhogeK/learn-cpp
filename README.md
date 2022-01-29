@@ -28,6 +28,7 @@
     * [2 TYPES](#2-types)
       * [Fundamental Types](#fundamental-types)
         * [Listing 2-1](#listing-2-1)
+        * [Listing 2-2](#listing-2-2)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -264,6 +265,22 @@ void listing_2_1() {
     printf("%d\n", b);
     unsigned long long d = 0xFFFFFFFFFFFFFFF;
     printf("%llu\n", d);
+}
+```
+
+###### Listing 2-2
+
+> Listing 2-2: A program that uses octal and hexadecimal representations of unsigned integers
+
+```c++
+/**
+ * 打印十六进制，十进制，八进制
+ */
+void listing_2_2() {
+    unsigned int a = 3669732608;
+    printf("Yabba %x!\n", a);
+    unsigned int b = 69;
+    printf("There are %u, %o leaves here. \n", b, b);
 }
 ```
 
