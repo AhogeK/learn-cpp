@@ -29,6 +29,7 @@
       * [Fundamental Types](#fundamental-types)
         * [Listing 2-1](#listing-2-1)
         * [Listing 2-2](#listing-2-2)
+        * [Listing 2-3](#listing-2-3)
 * [External](#external)
   * [strlen](#strlen)
   * [strcmp](#strcmp)
@@ -282,6 +283,20 @@ void listing_2_2() {
     unsigned int b = 69;
     printf("There are %u, %o leaves here. \n", b, b);
 }
+```
+
+###### Listing 2-3
+
+> Listing 2-3: A program printing several floating points
+
+```c++
+void listing_2_3() {
+    double an = 6.0221409e23;
+    /* l 代表 double le 科学计数 lf 普通计数 lg 计算机选择最合适的计数方式 */
+    printf("Avogaadro's Number: %le %lf %lg\n", an, an, an);
+    float hp = 9.75;
+    printf("Hogwarts' Platform: %e %f %g\n", hp, hp, hp);
+}jj
 ```
 
 ## External
