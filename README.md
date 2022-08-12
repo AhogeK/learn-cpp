@@ -5,8 +5,8 @@
 ## 目录
 
 * C++ CRASH COURSE
-    * [1 UP AND RUNNING](doc/book/c++-crash-course/1-up-and-running.md)
-* imooc 414
+  * [1 UP AND RUNNING](doc/book/c++-crash-course/1-up-and-running.md)
+* [imooc 414](https://coding.imooc.com/learn/list/414.html)
   * [字符串相关内容](doc/imooc/414/字符串.md)
   * [指针引用相关内容](doc/imooc/414/指针引用相关.md)
   * [enum](#enum)
