@@ -259,5 +259,5 @@ void listing_2_27() {
     Taxonomist t5('g');
     Taxonomist t6 = {'l'};
     Taxonomist t7{};
-    Taxonomist t8();
+//    Taxonomist t8();
 }

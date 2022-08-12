@@ -130,29 +130,38 @@ The comments similar to other programming languages, just like ``//`` ``/* */`` 
 ```shell
 # compile first
 gdb gdb_test
+lldb gdb_test
 
 # breaking point
 (gdb) break main.cpp:5
+(lldb) b main.cpp:5
 # or
 (gdb) break main
+(lldb) b main
 
 # execution
 (gdb) run
+(lldb) r
 
 # next step and you can use return key to next
 (gdb) step
+(lldb) s
 
 # finish
 (gdb) finish
+(lldb) finish
 
 # enter a function
 (gdb) next
+(lldb) n
 
 # view local variables
 (gdb) info locals
+(lldb) fr v -a
 
 # continue to next break point
 (gdb) continue
+(lldb) c
 
 # exit gdb
 (gdb) quit

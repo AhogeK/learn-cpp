@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
 project(learn_cpp)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 file(GLOB CPP_CRASH_COURSE *.cpp crash-course/part-1/*.cpp crash-course/part-1/*.h)
@@ -9,7 +10,13 @@ file(GLOB CPP_CRASH_COURSE *.cpp crash-course/part-1/*.cpp crash-course/part-1/*
 add_executable(learn_cpp ${CPP_CRASH_COURSE})
 
 # CRASH COURSE
-add_executable(gdb_test crash-course/personal/gdb_test.cpp)
+add_executable(listing_1_1 crash-course/part-one/listing_1_1.cpp)
+add_executable(listing_1_2 crash-course/part-one/listing_1_2.cpp)
+add_executable(listing_1_4 crash-course/part-one/listing_1_4.cpp)
+add_executable(listing_1_7 crash-course/part-one/listing_1_7.cpp)
+add_executable(listing_1_8 crash-course/part-one/listing_1_8.cpp)
+add_executable(exercise_1_1 crash-course/part-one/exercise_1_1.cpp)
+add_executable(exercise_1_4 crash-course/part-one/exercise_1_4.cpp)
 
 # External
 add_executable(strlen_test external/strlen_test.cpp)
