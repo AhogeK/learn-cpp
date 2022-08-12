@@ -7,13 +7,13 @@
 
 int main() {
     char szInput[256];
-    std::FILE *tmpf = std::tmpfile();
-    std::fputs("Just Testing", tmpf);
+    std::FILE *tmpFile = std::tmpfile();
+    std::fputs("Just Testing", tmpFile);
 
-    std::rewind(tmpf);
+    std::rewind(tmpFile);
     char buf[8];
     int index = 0;
-    while (std::fgets(buf, sizeof buf, tmpf) != nullptr) {
+    while (std::fgets(buf, sizeof buf, tmpFile) != nullptr) {
         if (index != 0 && buf[index--] == '\000') index--;
         for (char i: buf) {
             szInput[index++] = i;

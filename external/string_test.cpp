@@ -19,7 +19,7 @@ int main() {
     // Print out the result
     std::cout << string3 << '\n';
 
-    std::string::size_type pos = string3.find(" ");
+    std::string::size_type pos = string3.find(' ');
     string1 = string3.substr(pos + 1); // the part after the space
     string2 = string3.substr(0, pos);  // the part till the space
 
