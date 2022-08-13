@@ -6,8 +6,8 @@
 #include <memory>
 
 int main() {
-    // foo   bar    p
-    // ---   ---   ---
+                                                // foo   bar    p
+                                                // ---   ---   ---
     std::unique_ptr<int> foo;                   // null
     std::unique_ptr<int> bar;                   // null  null
     int *p = nullptr;                           // null  null  null
